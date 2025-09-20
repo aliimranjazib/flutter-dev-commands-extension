@@ -1,0 +1,172 @@
+{
+  "name": "flutter-dev-commands",
+  "displayName": "Flutter Dev Commands",
+  "description": "A sidebar extension with common Flutter development commands",
+  "version": "1.0.0",
+  "publisher": "flutter-dev",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "flutterDevCommands",
+          "name": "Flutter Commands"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "flutterDev.runFlutter",
+        "title": "Run Flutter App",
+        "icon": "$(play)"
+      },
+      {
+        "command": "flutterDev.buildApk",
+        "title": "Build APK",
+        "icon": "$(package)"
+      },
+      {
+        "command": "flutterDev.buildIos",
+        "title": "Build iOS",
+        "icon": "$(device-mobile)"
+      },
+      {
+        "command": "flutterDev.clean",
+        "title": "Flutter Clean",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "flutterDev.getPackages",
+        "title": "Get Packages",
+        "icon": "$(download)"
+      },
+      {
+        "command": "flutterDev.pubUpgrade",
+        "title": "Pub Upgrade",
+        "icon": "$(arrow-up)"
+      },
+      {
+        "command": "flutterDev.analyze",
+        "title": "Flutter Analyze",
+        "icon": "$(search)"
+      },
+      {
+        "command": "flutterDev.test",
+        "title": "Run Tests",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "flutterDev.doctor",
+        "title": "Flutter Doctor",
+        "icon": "$(heart)"
+      },
+      {
+        "command": "flutterDev.checkVersion",
+        "title": "Check Flutter Version",
+        "icon": "$(info)"
+      },
+      {
+        "command": "flutterDev.format",
+        "title": "Format Code",
+        "icon": "$(symbol-misc)"
+      },
+      {
+        "command": "flutterDev.createProject",
+        "title": "Create New Project",
+        "icon": "$(new-folder)"
+      },
+      {
+        "command": "flutterDev.openFolder",
+        "title": "Open Project Folder",
+        "icon": "$(folder-opened)"
+      },
+      {
+        "command": "flutterDev.openDevTools",
+        "title": "Open DevTools",
+        "icon": "$(tools)"
+      },
+      {
+        "command": "flutterDev.hotReload",
+        "title": "Hot Reload",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "flutterDev.hotRestart",
+        "title": "Hot Restart",
+        "icon": "$(debug-restart)"
+      },
+      {
+        "command": "flutterDev.buildWeb",
+        "title": "Build Web",
+        "icon": "$(globe)"
+      },
+      {
+        "command": "flutterDev.buildDesktop",
+        "title": "Build Desktop",
+        "icon": "$(desktop-download)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "flutterDev.refresh",
+          "when": "view == flutterDevCommands",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "flutterDev.addToFavorites",
+          "when": "view == flutterDevCommands && viewItem == command",
+          "group": "inline"
+        },
+        {
+          "command": "flutterDev.runCommand",
+          "when": "view == flutterDevCommands && viewItem == command",
+          "group": "inline"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "flutterDev.runFlutter",
+        "key": "ctrl+shift+f5",
+        "mac": "cmd+shift+f5",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "flutterDev.hotReload",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "flutterDev.hotRestart",
+        "key": "ctrl+shift+shift+r",
+        "mac": "cmd+shift+shift+r",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4",
+    "@vscode/vsce": "^2.19.0"
+  }
+}
