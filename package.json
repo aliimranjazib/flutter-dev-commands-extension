@@ -3,7 +3,7 @@
   "displayName": "Flutter Dev Commands",
   "description": "A sidebar extension with common Flutter development commands",
   "version": "1.0.0",
-  "publisher": "flutter-dev",
+  "publisher": "aliemranj",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -11,6 +11,24 @@
     "Other",
     "Snippets"
   ],
+  "keywords": [
+    "flutter",
+    "dart",
+    "mobile",
+    "development",
+    "commands",
+    "sidebar",
+    "productivity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliimranjazib/flutter-dev-commands-extension.git"
+  },
+  "homepage": "https://github.com/aliimranjazib/flutter-dev-commands-extension#readme",
+  "bugs": {
+    "url": "https://github.com/aliimranjazib/flutter-dev-commands-extension/issues"
+  },
+  "license": "MIT",
   "activationEvents": [
     "*"
   ],
